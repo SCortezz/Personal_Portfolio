@@ -10,5 +10,5 @@ def contact(request):
     return render(request, "contact.html")
 
 
-def contact(request, id):
+def project(request, id):
     return render(request, "project.html")
