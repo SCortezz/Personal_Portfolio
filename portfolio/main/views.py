@@ -3,7 +3,9 @@ from .models import Project, Tag
 
 
 def home(request):
-    return render(request, "home.html")
+    projects = Project.objects.all()
+    tags = Tag.objects.all()
+    return render(request, "home.html", {"projects": projects, "tags": tags})
 
 
 def contact(request):
